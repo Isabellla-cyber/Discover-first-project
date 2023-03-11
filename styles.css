@@ -130,6 +130,18 @@ body{
 }
 
 
+.slideshow-item-text{
+  background-color:bluepowder;
+}
+h5 {
+  color: red;
+  }
+
+b { color:#42c0fb;
+}
+
+
+
 * {box-sizing: border-box;}
 html, body {height:100%;}
 body { 
