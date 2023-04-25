@@ -142,9 +142,13 @@ b { color:#42c0fb;
 
 b {
  Font-family: ;
- font-size: 5px;
+ font-weight: 5px;
 }
 
+small{
+ Font-family: ;
+ font-size: 10px;
+}
 
 
 
