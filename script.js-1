@@ -1,3 +1,21 @@
+$(document).ready(function () {
+  $(".like-button").click(function () {
+    $(this).toggleClass("is-active");
+  });
+});
+
+let btn = document.querySelector("button");
+let classObj = {
+  ori: "small",
+  small: "medium",
+  medium: "large",
+  large: "ori"
+};
+
+btn.addEventListener("click", () => {
+  btn.classList = classObj[btn.classList[0]];
+});
+
 // WORK IN PROGRESS BELOW
 
 $("document").ready(function () {
@@ -74,3 +92,13 @@ $("document").ready(function () {
     });
   });
 });
+
+
+
+
+
+
+
+
+
+
