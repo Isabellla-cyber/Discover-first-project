@@ -1,0 +1,30 @@
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: "en",
+      includedLanguages: "af,de,en,es,fr,it,ja,pt,tr",
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    },
+    "google_translate_element"
+  );
+}
+
+let slideIndex = 0;
+function showSlides() {
+  let slides = document.getElementsByClassName("mySlides");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 3000);
+}
+showSlides();
+
+document.getElementById("likeBtn").addEventListener("click", function () {
+  this.classList.toggle("active");
+});
+
