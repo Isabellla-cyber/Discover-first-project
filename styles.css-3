@@ -1,1 +1,7 @@
-
+:root {
+  --primary: #6c2dc7;
+  --secondary: #bf40bf;
+  --dark: #1a1a1a;
+  --light: #f4f4f4;
+  --accent: #ff4500;
+}
