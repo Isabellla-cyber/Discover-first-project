@@ -1,1 +1,177 @@
+:root {
+  --primary: #6c2dc7;
+  --secondary: #bf40bf;
+  --dark: #1a1a1a;
+  --light: #f4f4f4;
+  --accent: #ff4500;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: #eee;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  color: var(--primary);
+  font-size: 3rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#google_translate_element {
+  margin: 20px 0;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  border-left: 5px solid var(--secondary);
+}
+
+.highlight {
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 20px 0;
+  border: 3px solid #444;
+}
+
+.mySlides {
+  display: none;
+}
+.mySlides img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  color: pink;
+}
+
+/* Added Styles for the 3 Small Pictures */
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.small-pic {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #444;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.small-pic:hover {
+  transform: scale(1.1);
+}
+
+.btn-group {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+button,
+.link-btn {
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.primary-btn {
+  background: var(--primary);
+  color: white;
+}
+.primary-btn:hover {
+  background: var(--secondary);
+  transform: scale(1.05);
+}
+
+.like-button {
+  background: #444;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.like-button.active {
+  color: #ff4f8f;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  font-size: 0.9rem;
+  color: #888;
+}
 
