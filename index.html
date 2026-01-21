@@ -8,10 +8,152 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;700&family=Material+Icons&display=swap" rel="stylesheet">
 
   <style>
+    /* === CSS SECTION (FIXED) === */
+    :root {
+      --primary: #6c2dc7;
+      --secondary: #bf40bf;
+      --dark: #1a1a1a;
+      --light: #f4f4f4;
+      --accent: #ff4500;
+    }
 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      color: #eee;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    header { text-align: center; margin-bottom: 40px; }
+
+    h1 {
+      color: var(--primary);
+      font-size: 3rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    #google_translate_element {
+      margin: 20px 0;
+      padding: 10px;
+      background: #fff;
+      border-radius: 8px;
+      display: inline-block;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .content-grid { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 25px;
+      border-radius: 15px;
+      border-left: 5px solid var(--secondary);
+    }
+
+    .highlight { color: var(--secondary); font-weight: 600; }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      border-radius: 15px;
+      overflow: hidden;
+      margin: 20px 0;
+      border: 3px solid #444;
+    }
+
+    .mySlides { display: none; }
+    .mySlides img { width: 100%; height: 300px; object-fit: cover; }
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      color: pink;
+    }
+
+    .image-row {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+
+    .small-pic {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #444;
+      transition: 0.3s;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    button, .link-btn {
+      padding: 12px 25px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .primary-btn { background: var(--primary); color: white; }
+    .primary-btn:hover { background: var(--secondary); transform: scale(1.05); }
+
+    .like-button { background: #444; color: white; display: flex; align-items: center; gap: 8px; }
+    .like-button.active { color: #ff4f8f; }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #444;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    .fade { animation: fade 1.5s; }
+    @keyframes fade { from {opacity: 0.4} to {opacity: 1} }
   </style>
 </head>
-
 <body>
 
   <div class="container">
@@ -24,12 +166,10 @@
     <div class="content-grid">
       <div class="card">
         <h3>The Adventure</h3>
-        <p> A few years ago, I embarked on the wonderful adventure of learning Software Engineering in English. After having learned programming in Portuguese, I dove into this new field and completed my program in <strong>April 2024</strong>.</p>
+        <p>A few years ago, I embarked on the wonderful adventure of learning Software Engineering in English. After having learned programming in Portuguese, I dove into this new field and completed my program in <strong>April 2024</strong>.</p>
         <br>
-
         <h3>What I have learned:</h3>
-        <br>
-        <p><span class="highlight">1. It’s Possible:</span> Study from home, even with no prior experience.</p>
+        <p><span class="highlight">1. It’s Possible:</span> Study from home.</p>
         <p><span class="highlight">2. Perseverance:</span> The journey is worth every step.</p>
       </div>
 
@@ -49,20 +189,10 @@
       </div>
     </div>
 
-    <div class="card" style="margin-top: 20px;">
-      <h3>Programs to Look For</h3>
-      <ul style="list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 10px;">
-        <li>🚀 DevOps Engineer</li>
-        <li>☁️ Cloud Engineer</li>
-        <li>🛡️ Cybersecurity</li>
-        <li>🤖 AI Specialist</li>
-      </ul>
-    </div>
-
     <div class="image-row">
-      <img src="https://cdn.pixabay.com/photo/2024/03/22/06/06/ai-generated-8649014_1280.png" class="small-pic" alt="Small Feature 1">
-      <img src="https://cdn.pixabay.com/photo/2024/03/22/06/06/ai-generated-8649016_1280.png" class="small-pic" alt="Small Feature 2">
-      <img src="https://cdn.pixabay.com/photo/2024/03/22/06/06/ai-generated-8649013_1280.png" class="small-pic" alt="Small Feature 3">
+      <img src="https://cdn.pixabay.com/photo/2024/03/22/06/06/ai-generated-8649014_1280.png" class="small-pic" alt="Feature 1">
+      <img src="https://cdn.pixabay.com/photo/2024/03/22/06/06/ai-generated-8649016_1280.png" class="small-pic" alt="Feature 2">
+      <img src="https://cdn.pixabay.com/photo/2024/03/22/06/06/ai-generated-8649013_1280.png" class="small-pic" alt="Feature 3">
     </div>
 
     <div class="btn-group">
@@ -78,22 +208,35 @@
     </footer>
   </div>
 
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>;
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: "en",
+        includedLanguages: "af,de,en,es,fr,it,ja,pt,tr",
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, "google_translate_element");
+    }
+
+    let slideIndex = 0;
+    function showSlides() {
+      let slides = document.getElementsByClassName("mySlides");
+      if (slides.length === 0) return;
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
+    showSlides();
+
+    document.getElementById("likeBtn").addEventListener("click", function() {
+      this.classList.toggle("active");
+    });
+  </script>
 
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
